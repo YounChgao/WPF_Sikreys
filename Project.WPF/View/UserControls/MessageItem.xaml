@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Project.WPF.View.UserControls.MessageItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Project.WPF.View.UserControls"
+             mc:Ignorable="d" 
+             >
+    <Border CornerRadius="30" Background="GreenYellow" Padding="20" MinHeight="40" MinWidth="150">
+        <StackPanel>
+            <Image>
+                <!--<Image.Source--> 
+            </Image>
+            <TextBlock x:Name="textMessage" Text="Message" FontSize="20" TextAlignment="Center" />
+            <Label x:Name="timeMessage" Content="Time" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </Border>
+</UserControl>

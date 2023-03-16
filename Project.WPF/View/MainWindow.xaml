@@ -1,0 +1,48 @@
+﻿<Window x:Class="Project.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project.WPF"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="450" Width="800" 
+        Background="White"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        
+        <Frame Grid.Row="1" Grid.Column="2" x:Name="MainFrame" Source="ChatPage.xaml"/>
+        
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button x:Name="profileButton">Профиль</Button>
+            
+            <ListBox x:Name="listBox" >
+                
+            </ListBox>
+            <ListView x:Name="listOfChats" Margin="5, 10, 5, 0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock MouseLeftButtonDown="EnterChat_Click">
+                                    <TextBlock Text="Пользователь: "/>
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                    <LineBreak/>
+                            </TextBlock>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
