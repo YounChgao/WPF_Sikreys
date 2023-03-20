@@ -17,7 +17,7 @@ public class ApiClient
     /// Отправить запрос на получение Post
     /// </summary>
     /// <returns></returns>
-    public Task GetPost()
+    public Task GetPostAsync()
     {
         
     }
@@ -26,7 +26,7 @@ public class ApiClient
     /// Отправить запрос на создание Post
     /// </summary>
     /// <returns></returns>
-    public Task PostPost()
+    public Task PostPostAsync()
     {
 
     }
@@ -35,7 +35,7 @@ public class ApiClient
     /// Отправить запрос на изменение или обновление Post
     /// </summary>
     /// <returns></returns>
-    public Task PutPost()
+    public Task PutPostAsync()
     {
 
     }
@@ -44,7 +44,7 @@ public class ApiClient
     /// Отправить запрос на удаление Post
     /// </summary>
     /// <returns></returns>
-    public Task DeletePost()
+    public Task DeletePostAsync()
     {
 
     }
